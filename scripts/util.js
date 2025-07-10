@@ -33,7 +33,6 @@ export function flashGreen(){
 export function updateGameText(){
     gameText.textContent = scoreMap[correctAnswerCount].gameText;
     gameLevelCountText.textContent = correctAnswerCount;
-
 }
 
 export function increaseCorrectAnswerCount(){

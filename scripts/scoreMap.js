@@ -5,4 +5,4 @@ export const scoreMap = {	0: { gameText: "Welcome to the impossible game! Please
                 2: { gameText: "That's better. This game is going to be really hard :D", answer: "ok" },
                 3: { gameText: "What color am I?", answer: "#e59866" },
                 4: { gameText: "I like you :D Would you be mad if I made you do math?", answer: "no"}
-            };
+};
