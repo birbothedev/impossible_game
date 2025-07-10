@@ -1,0 +1,68 @@
+@font-face {
+    font-family: calSans;
+    src: url(CalSans-Regular.ttf);
+    font-weight: bold;
+}
+
+body {
+    background-color: #e59866;
+    font-family: calSans;
+}
+
+.gameWrapper {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
+    gap: 5%; 
+}
+
+
+.gameTextInput {
+    background-color: burlywood;
+    color: darkslategray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 1%;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    height: 10%;
+    width: 60%;
+}
+
+#guessInput {
+    font-size: 16px;
+    width: 800px;
+    height: 25px;
+    padding: 8px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+}
+
+#guessInput:focus{
+    outline: none;
+}
+
+@keyframes flashJiggleInputRed {
+    0%, 100% { border-color: burlywood; transform: translateX(0); }
+    25%, 75% { border-color: red; }
+    50% { transform: translateX(-2px); }
+}
+
+.flash-jiggleRed {
+    animation: flashJiggleInputRed 0.5s ease-in-out 2, jiggleInput 0.5s ease-in-out 3 alternate;
+}
+
+@keyframes flashJiggleInputGreen {
+    0%, 100% { border-color: burlywood; transform: translateX(0); }
+    25%, 75% { border-color: green; }
+    50% { transform: translateX(-2px); }
+}
+
+.flash-jiggleGreen {
+    animation: flashJiggleInputGreen 0.5s ease-in-out 2, jiggleInput 0.5s ease-in-out 3 alternate;
+}
