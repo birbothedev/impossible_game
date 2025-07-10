@@ -27,7 +27,6 @@ guessInput.addEventListener('keydown', function(event) {
 
 function initialize(){
     updateGameText();
-    console.log("Your name is Bob!");
 }
 
 initialize();

@@ -2,6 +2,7 @@ import { scoreMap } from "./scoreMap.js";
 
 export const guessInput = document.getElementById('guessInput');
 export const gameText = document.getElementById('gameText');
+export const gameLevelCountText = document.getElementById('gameLevelCountText');
 export let correctAnswerCount = 0;
 
 export function checkCorrectAnswer(guessString){
@@ -31,9 +32,13 @@ export function flashGreen(){
 
 export function updateGameText(){
     gameText.textContent = scoreMap[correctAnswerCount].gameText;
+    gameLevelCountText.textContent = correctAnswerCount;
+
 }
 
 export function increaseCorrectAnswerCount(){
     correctAnswerCount++;
-    console.log("increasing answer count to: ", correctAnswerCount);
+    if (correctAnswerCount == 1){
+        console.log("Your name is Bob!");
+    }
 }

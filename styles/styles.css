@@ -18,6 +18,13 @@ body {
     gap: 5%; 
 }
 
+.gameTextArea {
+    max-width: 80%;
+}
+
+#gameLevelCountText {
+    margin: 0 auto;
+}
 
 .gameTextInput {
     background-color: burlywood;
