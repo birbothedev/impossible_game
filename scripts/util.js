@@ -5,7 +5,7 @@ export const guessInput = document.getElementById('guessInput');
 export const gameText = document.getElementById('gameText');
 export const gameLevelCountText = document.getElementById('gameLevelCountText');
 
-export let correctAnswerCount = 6;
+export let correctAnswerCount = 0;
 
 export function checkCorrectAnswer(guessString){
     const answer = scoreMap[correctAnswerCount].answer;
