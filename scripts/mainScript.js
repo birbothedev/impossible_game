@@ -1,5 +1,8 @@
 
-import { guessInput, checkCorrectAnswer, updateGameText, increaseCorrectAnswerCount } from "./util.js";
+import { guessInput, checkCorrectAnswer, updateGameText, 
+    increaseCorrectAnswerCount, toggleElementVisibility} from "./util.js";
+
+import { yesButton, noButton } from "./specialCases.js";
 
 export let guess;
 let hasGuessedOnce = false;
@@ -27,6 +30,8 @@ guessInput.addEventListener('keydown', function(event) {
 
 function initialize(){
     updateGameText();
+    toggleElementVisibility(yesButton);
+    toggleElementVisibility(noButton);
 }
 
 initialize();

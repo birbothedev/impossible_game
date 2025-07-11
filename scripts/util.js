@@ -1,9 +1,11 @@
 import { scoreMap } from "./scoreMap.js";
+import { specialCases } from "./specialCases.js";
 
 export const guessInput = document.getElementById('guessInput');
 export const gameText = document.getElementById('gameText');
 export const gameLevelCountText = document.getElementById('gameLevelCountText');
-export let correctAnswerCount = 0;
+
+export let correctAnswerCount = 6;
 
 export function checkCorrectAnswer(guessString){
     const answer = scoreMap[correctAnswerCount].answer;
@@ -31,13 +33,26 @@ export function flashGreen(){
 }
 
 export function updateGameText(){
-    gameText.textContent = scoreMap[correctAnswerCount].gameText;
     gameLevelCountText.textContent = correctAnswerCount;
+
+    if (correctAnswerCount >= Object.keys(scoreMap).length) {
+        gameText.textContent = "You win I guess :(";
+    } else {
+        gameText.textContent = scoreMap[correctAnswerCount].gameText;
+    }
 }
 
 export function increaseCorrectAnswerCount(){
     correctAnswerCount++;
-    if (correctAnswerCount == 1){
-        console.log("Your name is Bob!");
+    // console.log("Correct answer count: ", correctAnswerCount);
+    // console.log("Score Map Size: ", Object.keys(scoreMap).length);
+    specialCases();
+}
+
+export function toggleElementVisibility(element){
+    if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+    } else {
+        element.classList.add('hidden');
     }
 }
