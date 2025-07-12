@@ -15,6 +15,8 @@ export function checkCorrectAnswer(guessString){
         flashGreen();
         increaseCorrectAnswerCount();
         updateGameText();
+        guessInput.placeholder = "Enter your response";
+        console.clear();
     }
 }
 
